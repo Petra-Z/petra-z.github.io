@@ -1,0 +1,771 @@
+/********** NORMES **********/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", "Times New Roman", sans-serif;
+}
+
+h1 {
+  font-size: 1.5rem;
+}
+
+h2 {
+  font-size: 1.3rem;
+}
+
+h3 {
+  font-size: 1.2rem;
+}
+
+p,
+li {
+  font-size: 1.1rem;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+body {
+  width: 100%;
+  min-width: 320px;
+  max-height: 100vh;
+  margin: 0 auto;
+}
+
+/**************LOADER ANIMATION***********/
+
+.loader {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  z-index: 1000;
+  background-color: #ffffffc9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: loader 0.5s 1.2s both ease-out;
+}
+
+.spinner {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: purple;
+  background: linear-gradient(#ed92df, #a65cdc);
+  box-shadow: 0px 0px 200px -1px black;
+  border: 2px solid white;
+  animation: spin 1.2s linear infinite;
+}
+
+.spinner::before {
+  content: "";
+  background-color: white;
+  position: absolute;
+  width: 80%;
+  height: 80%;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: inset 0px 0px 100px -70px black;
+  border: 2px solid white;
+}
+
+@keyframes loader {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+    z-index: -1000;
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0turn);
+  }
+  100% {
+    transform: rotate(1turn);
+  }
+}
+
+/*********** INDEX VERSION MOBILE************/
+/*********** HEADER **********/
+
+.header__logo {
+  width: 100%;
+  height: 60px;
+  text-align: center;
+  padding-top: 15px;
+  position: relative;
+  z-index: 1;
+  box-shadow: 0px 8px 15px -5px rgba(0, 0, 0, 0.1);
+}
+
+.header__logo img {
+  width: 200px;
+  height: 35px;
+}
+
+/********** DIV LOCATION **********/
+
+.location {
+  background-color: #eaeaea;
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.location i {
+  padding-right: 15px;
+  padding-bottom: 5px;
+  font-size: 1rem;
+}
+
+/********** DIV EXPLORER **********/
+
+.explorer {
+  height: 250px;
+  width: 100%;
+  background: #f7f7f7;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 35px 0;
+}
+
+.explorer h1 {
+  width: 60%;
+  margin: 0 auto;
+}
+
+.explorer p {
+  width: 70%;
+  margin: 0 auto;
+}
+
+/********** DIV EXPLORER BUTTONS **********/
+
+.btn-purple {
+  width: 40%;
+  min-width: 185px;
+  max-width: 250px;
+  font-size: 1.1rem;
+  font-family: "Roboto", "Times New Roman", sans-serif;
+  height: 40px;
+  background: linear-gradient(#ed92df, #a65cdc);
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+  font-weight: 500;
+  color: white;
+  text-align: center;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+
+/********** ANIMATION BOUTONS PRINCIPAUX ***********/
+
+.btn-purple:hover {
+  opacity: 0.9;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.4);
+}
+
+/********** DIV FONCTIONNEMENT **********/
+
+.fonctionnement {
+  height: 350px;
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  padding-top: 30px;
+  padding-bottom: 40px;
+}
+
+.fonctionnement h1 {
+  align-self: flex-start;
+}
+
+/********** DIV FONCTIONNEMENT BUTTONS **********/
+
+.btn-fonctionnement {
+  width: 80%;
+  min-width: 260px;
+  max-width: 415px;
+  height: 65px;
+  box-shadow: 8px 8px 10px rgba(0, 0, 0, 0.15);
+  border: none;
+  border-radius: 15px;
+  position: relative;
+  cursor: pointer;
+  background: #f7f7f7;
+  font-size: 1rem;
+  font-weight: 600;
+  font-family: "Roboto", "Times New Roman", sans-serif;
+}
+
+.btn-fonctionnement i {
+  margin-right: 20px;
+}
+
+.btn-fonctionnement span {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: #9356dc;
+  position: absolute;
+  left: -10px;
+  top: 20px;
+  padding-top: 3px;
+  color: white;
+}
+
+.btn-fonctionnement:hover {
+  background: #f5edff;
+}
+
+/********** SECTION RESTAURANTS **********/
+
+.restaurants {
+  width: 100%;
+  height: 1200px;
+  background: #f7f7f7;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding-bottom: 30px;
+}
+
+.restaurants h1 {
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 30px;
+}
+
+/********** CARD RESTAURANTS **********/
+
+.card {
+  width: 90%;
+  height: 250px;
+  background: white;
+  margin: 0 auto;
+  overflow: hidden;
+  border-radius: 25px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.card:hover {
+  transform: scale(1.01);
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.card__img {
+  width: 100%;
+  height: 170px;
+  object-fit: cover;
+}
+
+.img__text {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: #99e2d0;
+  color: #149273;
+  font-family: inherit;
+  font-size: 1rem;
+  padding: 5px;
+}
+
+.card__body {
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+  position: relative;
+}
+
+/********** ANIMATION BOUTON COEUR *******/
+
+.fa-solid.fa-heart {
+  font-size: 1.7rem;
+  position: absolute;
+  right: 5px;
+  top: 10px;
+  background: linear-gradient(#ff79da, #9356dc);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  opacity: 0;
+}
+.fa-regular.fa-heart {
+  font-size: 1.7rem;
+  position: absolute;
+  right: 5px;
+  top: 10px;
+  opacity: 1;
+}
+
+.heart-icon:hover .fa-solid.fa-heart {
+  opacity: 1;
+  transition: 0.5s ease-in-out;
+}
+
+.heart-icon:hover .fa-regular.fa-heart {
+  opacity: 0;
+  transition: 0.5s ease-in-out;
+}
+
+/********** FOOTER *********/
+
+footer {
+  height: 30vh;
+  padding: 25px;
+  background: #353535;
+  color: white;
+}
+
+footer ul {
+  list-style-type: none;
+  margin-top: 15px;
+  margin-bottom: 25px;
+  line-height: 25px;
+}
+
+footer i {
+  padding-right: 10px;
+}
+
+footer img {
+  width: 170px;
+  height: 30px;
+  filter: invert(100%);
+}
+
+/********** PAGES VERSION MOBILE **************/
+
+.fa-arrow-left {
+  font-size: 1.3em;
+  position: absolute;
+  left: 30px;
+  top: 20px;
+}
+
+.menu__img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+/*********** SECTION MENU ***********/
+
+.menu {
+  width: 100%;
+  border-radius: 25px;
+  background: #f7f7f7;
+  position: relative;
+  z-index: 1;
+  margin-top: -30px;
+  padding: 20px;
+}
+
+.menu__title {
+  width: 100%;
+  height: 50px;
+  margin: 0 auto;
+  padding-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu__title h1 {
+  font-family: "Shrikhand";
+  font-size: 1.8em;
+}
+
+.menu__title i {
+  font-size: 1.5em;
+  position: absolute;
+}
+
+.fa-heart.pages {
+  top: 40px;
+  right: 10px;
+}
+
+/************* MENU ITEMS ***********/
+
+.menu__subtitle h2 {
+  font-weight: 300;
+  font-size: 1.2em;
+  border-bottom: 3px solid #99e2d0;
+  width: 10%;
+}
+
+.menu__subtitle {
+  width: 100%;
+  height: 350px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+.menu__button {
+  width: 100%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-align: center;
+}
+
+.menu__item {
+  width: 90%;
+  min-width: 345px;
+  max-width: 450px;
+  margin: 0 auto;
+  padding: 13px 20px 20px 20px;
+  background: white;
+  text-align: left;
+  overflow: hidden;
+  height: 70px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.15);
+  border: none;
+  border-radius: 15px;
+  position: relative;
+  cursor: pointer;
+}
+
+.menu__item-description {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.menu__button {
+  margin-bottom: 25px;
+}
+
+.menu__item-text {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+/********** ANIMATION APPARITION COCHE A DROITE **********/
+
+.menu__item-check {
+  position: absolute;
+  background-color: #99e2d0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 65px;
+  height: 70px;
+  transform-origin: right;
+  border-radius: 0px 15px 15px 0px;
+  transform: translateX(70px);
+  overflow: hidden;
+  transition-duration: 0.5s;
+}
+
+.fa-check-circle {
+  position: absolute;
+  left: 20px;
+  top: 25px;
+  font-size: 1.5rem;
+  transform: rotate(0deg);
+  color: white;
+  opacity: 1;
+}
+
+.menu__item:hover .menu__item-description {
+  width: calc(100% - 65px);
+  transition: width 0.5s ease-in-out;
+}
+
+.menu__item:hover .menu__item-check {
+  transform: translateX(0px);
+  transition: 0.5s ease-in-out;
+}
+
+.menu__item:hover .fa-check-circle {
+  transform: rotate(1turn);
+  transition: 0.5s ease-in-out;
+}
+
+/************* ANIMMTION APPARITION PROGRESSIVE MENU **********/
+
+.menu__subtitle > :nth-of-type(1) {
+  animation: SlideDown 0.9s ease-in-out;
+}
+
+.menu__subtitle > :nth-of-type(2) {
+  animation: SlideDown 1.2s ease-in-out;
+}
+
+.menu__subtitle > :nth-of-type(3) {
+  animation: SlideDown 1.5s ease-in-out;
+}
+
+.menu__subtitle > :nth-of-type(4) {
+  animation: SlideDown 1.8s ease-in-out;
+}
+
+@keyframes SlideDown {
+  from {
+    transform: translateY(70px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+/********* LA NOTE ENCHANTEE VERSION MOBILE *********/
+
+.menu__subtitle.quatre__entrees {
+  height: 450px;
+}
+
+/************ MEDIA QUERIES ***********/
+/********** VERSION TABLETTE **********/
+
+@media only screen and (min-width: 768px) and (max-width: 994px) {
+
+  /********** INDEX VERSION TABLETTE *******/
+
+  body {
+    width: 100%;
+  }
+
+  .header__logo {
+    width: 100%;
+  }
+
+  .header__logo img {
+    max-width: 25%;
+  }
+
+  .location {
+    width: 100%;
+  }
+
+  .btn-fonctionnement {
+    width: 27%;
+    min-width: 230px;
+  }
+
+  .fonctionnement {
+    width: 100%;
+    height: 200px;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+  }
+
+  .fonctionnement h1 {
+    width: 100%;
+    text-align: center;
+  }
+
+  .btn-fonctionnement i {
+    margin-right: 8px;
+  }
+
+  .restaurants {
+    width: 100%;
+    height: 700px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+
+  .restaurants h1 {
+    grid-column: 1 / -1;
+    text-align: center;
+  }
+
+  .card {
+    width: 90%;
+  }
+
+  footer {
+    text-align: center;
+  }
+
+  /********* PAGES VERSION TABLETTE **********/
+
+  .menu__title {
+    width: 70%;
+    margin: 0 auto;
+    position: relative;
+    margin-bottom: 20px;
+  }
+
+  .menu__subtitle {
+    width: 85%;
+    margin: 0 auto;
+    margin-top: 2px;
+  }
+
+  .menu__button {
+    margin-bottom: 20px;
+  }
+
+  .fa-heart.pages {
+    top: 20px;
+    right: 40px;
+  }
+}
+
+/********** VERSION DESKTOP **********/
+
+@media only screen and (min-width: 994px) {
+  
+  /******** INDEX VERSION DESKTOP *********/
+
+  body {
+    width: 100%;
+  }
+
+  .header__logo {
+    width: 100%;
+  }
+
+  .header__logo img {
+    max-width: 15%;
+  }
+
+  .location {
+    width: 100%;
+  }
+
+  .btn-fonctionnement {
+    width: 27%;
+  }
+
+  .fonctionnement {
+    width: 100%;
+    height: 200px;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+  }
+
+  .fonctionnement h1 {
+    width: 100%;
+    text-align: center;
+  }
+
+  .btn-fonctionnement i {
+    margin-right: 20px;
+  }
+
+  .restaurants {
+    height: 450px;
+    padding: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+
+  .restaurants h1 {
+    grid-column: 1 / -1;
+    text-align: center;
+  }
+
+  .card {
+    min-height: 275px;
+  }
+
+  .card__img {
+    height: 200px;
+  }
+
+  .fa-solid.fa-heart {
+    right: -5px;
+    top: 10px;
+  }
+
+  .fa-regular.fa-heart {
+    right: -5px;
+    top: 10px;
+  }
+
+  footer {
+    padding-top: 35px;
+    height: 25vh;
+    text-align: center;
+  }
+
+  footer > ul {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 30px;
+  }
+
+  /********** PAGES VERSION DESKTOP **********/
+
+  .menu {
+    width: 100%;
+    height: 720px;
+    padding: 10px;
+  }
+
+  .menu__title {
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 20px;
+    position: relative;
+  }
+
+  .fa-heart.pages {
+    top: 20px;
+    right: 40px;
+  }
+
+  .menu__item {
+    width: 95%;
+    padding: 10px 10px 10px 20px;
+  }
+
+  .menu__subtitle {
+    height: 150px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 15px;
+  }
+
+  .menu__subtitle h2 {
+    margin-top: 20px;
+    margin-left: 50px;
+    height: 30px;
+    grid-column: 1 / -1;
+    border-bottom: 3px solid #99e2d0;
+    width: 5%;
+  }
+
+  /********* LA NOTE ENCHANTEE VERSION DESKTOP *********/
+
+  .menu.note__enchantee {
+    height: 800px;
+  }
+
+  .menu__subtitle.quatre__entrees {
+    height: 250px;
+  }
+}
